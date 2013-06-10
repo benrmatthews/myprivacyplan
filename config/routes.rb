@@ -1,4 +1,7 @@
 Myprivacyplan::Application.routes.draw do
+  resources :comments
+
+
   resources :ideas
 
 
