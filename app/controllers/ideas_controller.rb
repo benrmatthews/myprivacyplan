@@ -2,8 +2,12 @@ class IdeasController < ApplicationController
   # GET /ideas
   # GET /ideas.json
   def index
-    @ideas = Idea.all
-
+    if params[:tag]
+      @ideas = Idea.tagged_with(params[:tag])
+    else
+      @ideas = Idea.all
+    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @ideas }

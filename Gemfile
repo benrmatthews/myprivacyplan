@@ -16,6 +16,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'acts-as-taggable-on'
 gem 'foreigner'
 gem 'carrierwave'
 gem 'mini_magick'

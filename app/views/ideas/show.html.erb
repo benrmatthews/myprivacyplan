@@ -1,12 +1,14 @@
 <div class="row">
   <div class="span8">
     <h3><%= @idea.name %></h3>
-      <p><b>Description: </b><%= @idea.description %></p>
-      <p>
-        <%= link_to 'Edit', edit_idea_path(@idea) %> |
-        <%= link_to 'Destroy', @idea, confirm: 'Are you sure?', method: :delete %> |
-        <%= link_to 'Back', ideas_path %>
-      </p>
+        <p>
+          <b>Description: </b><%= @idea.description %>
+        </p>
+          <p>
+            <%= link_to 'Edit', edit_idea_path(@idea) %> |
+            <%= link_to 'Destroy', @idea, confirm: 'Are you sure?', method: :delete %> |
+            <%= link_to 'Back', ideas_path %>
+          </p>
       <h3>Comments</h3>
       <% @idea.comments.each do |comment| %>
         <div>
