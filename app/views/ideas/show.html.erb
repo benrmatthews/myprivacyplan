@@ -22,7 +22,13 @@
   
 
   <div class="span4">
-      <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
+    <%= image_tag(@idea.picture_url, :width => "100%") if @idea.picture.present? %>
+    
+    <h3>Have you done this?</h3>
+    
+    <a class="btn btn-success" href="#"><i class="icon-ok icon-white"></i> I've Done This!</a><br>
+    <br>
+    <p>24 other people have done this</p>
   </div>
  
 </div>
