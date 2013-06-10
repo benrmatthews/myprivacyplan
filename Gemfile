@@ -3,6 +3,7 @@ gem 'rails', '3.2.13'
 
 group :development do
   gem 'sqlite3'
+  gem 'webrick', '~> 1.3.1'
 end
 
 group :production do
@@ -15,6 +16,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
