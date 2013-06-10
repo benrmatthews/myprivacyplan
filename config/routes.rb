@@ -1,8 +1,11 @@
 Myprivacyplan::Application.routes.draw do
+  resources :ideas
+
+
   authenticated :user do
-    root :to => 'home#index'
+    root :to => redirect('/ideas')
   end
-  root :to => "home#index"
+  root :to => redirect('/ideas')
   devise_for :users
   resources :users
 end

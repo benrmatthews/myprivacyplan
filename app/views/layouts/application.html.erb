@@ -5,6 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Myprivacyplan" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myprivacyplan" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag    "http://railsgirls.com/assets/bootstrap.css", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
