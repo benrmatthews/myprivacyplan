@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Myprivacyplan" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myprivacyplan" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "My Privacy Plan" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "My Privacy Plan" %>">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= stylesheet_link_tag    "http://railsgirls.com/assets/bootstrap.css", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
