@@ -1,13 +1,23 @@
-<h1>Listing ideas</h1>
+<h3><strong>
+A simple way to understand and take action on your personal online privacy.
+  </strong></h3>
+<p>
+<h5>We signpost guides to help educate around online privacy and tools to help you make changes to your online activity. Click on the Find Out More buttons for more on each tool or guide. Share this resource and help others get the tools to protect themselves online.
+</h5>
+</br>
 
 <% @ideas.each do |idea| %>
 <div class="row">
   <div class="span4">
-    <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
+    <div class="thumbnail">
+      <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
     <h4><%= link_to idea.name, idea %></h4>
     <p><strong>Tags:</strong> <%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-    <%= idea.description %>
+      <%= idea.description %></br>
+  </br>
+      <%= link_to "Find Out More", idea, :class => "btn btn-success btn-block" %>
+    </div>
   </div>
 <% end %>
-
-<br />
+  
+</br>
