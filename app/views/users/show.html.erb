@@ -1,10 +1,47 @@
 <% provide(:title, @user.name) %>
-
-<a href="<%= user_path(current_user) %>">
-</a>
-<h1>
-  <%= current_user.name %>
-</h1>
-<span>
-  <%= link_to "view my profile", current_user %>
-</span>
+<div class="row">
+  <aside class="span3">
+    <section>
+      <a href="<%= user_path(current_user) %>">
+        </a>
+        <h1>
+          <%= current_user.name %>
+        </h1>
+        <span>
+          <%= link_to "View my profile", current_user %>
+        </span>
+          <br>
+          <br>
+        <span>
+          <%= render 'shared/stats' %>
+        </span>
+        <span>
+          <a href="<%= user_path(current_user) %>">
+          </a>
+        </span>
+     </section>
+   </aside>
+   <aside class="span9">
+     <br>
+      <div id="tab" class="btn-group" data-toggle="buttons-radio">
+        <a href="#planned" class="btn btn-large btn-info active" data-toggle="tab">Planned Ideas</a>
+        <a href="#completed" class="btn btn-large btn-info" data-toggle="tab">Completed Ideas</a>
+        <a href="#suggested" class="btn btn-large btn-info" data-toggle="tab">Suggested Ideas</a>
+      </div>
+      <div class="tab-content">
+      <div class="tab-pane active" id="planned">
+        <br>
+        <p class="lead">Planned Ideas</p>
+      </div>
+      <div class="tab-pane" id="completed">
+        <br>
+        <p class="lead">Completed Ideas</p>
+      </div>
+      <div class="tab-pane" id="suggested">
+        <br>
+        <p class="lead">Suggested Ideas</p>
+      </div>
+    </div>
+    <br>
+    <br>
+  </aside>
