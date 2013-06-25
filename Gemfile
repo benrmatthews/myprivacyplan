@@ -19,8 +19,11 @@ end
 gem 'acts-as-taggable-on'
 gem 'foreigner'
 gem 'carrierwave'
-gem "fog", "~> 1.3.1"
+gem 'carrierwave_direct'
+gem 'sidekiq'
+gem "fog"
 gem 'mini_magick'
+gem 'rmagick'
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
