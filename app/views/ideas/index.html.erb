@@ -11,17 +11,15 @@
 </br>
 
 <% @ideas.each do |idea| %> 
-  <div class="row">
+ <div class="row">
     <div class="span4">
-      <div class="thumbnail">
-        <%= link_to image_tag("idea.picture_url(:thumb)"), idea if idea.picture? %>
+      <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
       <h4><%= link_to idea.name, idea %></h4>
       <p><strong>Tags:</strong> <%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
         <!-- <%= idea.description %></br> -->
     </br>
         <%= link_to "Find Out More", idea, :class => "btn btn-success btn-block" %>
       </div>
-    </div>
 <% end %>
   
 </br>
