@@ -4,6 +4,8 @@ class IdeasController < ApplicationController
   def index
     if params[:tag]
       @ideas = Idea.tagged_with(params[:tag])
+      @search = Idea.search(params[:q])
+      @ideas = @search.result
     else
       @ideas = Idea.all
       @search = Idea.search(params[:q])
