@@ -18,18 +18,17 @@
     </form>
   <% end %>
 
-    <h4>All Ideas:</h4>    
+<h4>Ideas:</h4>    
+<ul class="thumbnails">
 <% @ideas.each do |idea| %> 
- <div class="row">
-    <div class="span4">
+    <div class="box span4 clearfix">
       <%= image_tag idea.picture_url(:thumb) if idea.picture? %>
       <h4><%= link_to idea.name, idea %></h4>
       <p><strong>Tags:</strong> <%= raw idea.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
         <!-- <%= idea.description %></br> -->
     </br>
-        <%= link_to "Find Out More", idea, :class => "btn btn-success btn-block" %>
+        <%= link_to "Find Out More", idea, :class => "btn btn-success btn-block" %><br /><br />
       </div>
 <% end %>
-    </div>
-<br />
+</ul>
 <br />
