@@ -5,4 +5,14 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  def search
+   @search = Idea.search(params[:q])
+   @ideas = @search.result
+  end 
+  
+  def show
+   @search = Idea.search(params[:q])
+   @ideas = @search.result
+  end 
+  
 end

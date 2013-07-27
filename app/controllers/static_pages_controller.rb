@@ -12,8 +12,10 @@ class StaticPagesController < ApplicationController
   end
 
   def search
-  end
-
+   @search = Idea.search(params[:q])
+   @ideas = @search.result
+  end 
+  
   def terms
   end
 
