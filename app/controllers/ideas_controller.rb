@@ -6,6 +6,8 @@ class IdeasController < ApplicationController
       @ideas = Idea.tagged_with(params[:tag])
     else
       @ideas = Idea.all
+      @search = Idea.search(params[:q])
+      @ideas = @search.result
     end
     
     respond_to do |format|

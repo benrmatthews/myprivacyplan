@@ -7,18 +7,12 @@
   <% else %>
     <li ><%= link_to 'New Idea', new_user_registration_path %></li>
     <li ><%= link_to "Your Plan", new_user_registration_path %></li>
+  <li ><%= link_to "Search", '#' %></li>
   <% end %>
 </ul>
 
 <ul class="nav pull-right">
-  <li>
-    <form id="custom-search-form" class="form-search form-horizontal">
-        <div class="input-append">
-            <input type="text" class="search-query" placeholder="Search">
-            <button type="submit" class="btn"><i class="icon-search"></i></button>
-        </div>
-    </form>
-  </li>
+
   <% if user_signed_in? %>
   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
   <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
