@@ -46,12 +46,16 @@ class IdeasController < ApplicationController
   # GET /ideas/1/edit
   def edit
     @idea = Idea.find(params[:id])
+    @search = Idea.search(params[:q])
+    @ideas = @search.result
   end
 
   # POST /ideas
   # POST /ideas.json
   def create
     @idea = Idea.new(params[:idea])
+    @search = Idea.search(params[:q])
+    @ideas = @search.result
 
     respond_to do |format|
       if @idea.save
@@ -68,6 +72,8 @@ class IdeasController < ApplicationController
   # PUT /ideas/1.json
   def update
     @idea = Idea.find(params[:id])
+    @search = Idea.search(params[:q])
+    @ideas = @search.result
 
     respond_to do |format|
       if @idea.update_attributes(params[:idea])
@@ -84,6 +90,8 @@ class IdeasController < ApplicationController
   # DELETE /ideas/1.json
   def destroy
     @idea = Idea.find(params[:id])
+    @search = Idea.search(params[:q])
+    @ideas = @search.result
     @idea.destroy
 
     respond_to do |format|
