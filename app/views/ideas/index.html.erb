@@ -9,6 +9,16 @@
   </h5>
 </div>
 
+<h4>Search Ideas:</h4><form class="navbar-form">
+    <%= search_form_for @search do |f| %>
+    <form id="custom-search-form" class="form-search">
+        <div class="input-append">
+          <%= f.text_field :name_cont %><button type="submit" class="btn"><i class="icon-search"></i></button>
+        </div>
+    </form>
+  <% end %>
+
+    <h4>All Ideas:</h4>    
 <% @ideas.each do |idea| %> 
  <div class="row">
     <div class="span4">
@@ -20,5 +30,6 @@
         <%= link_to "Find Out More", idea, :class => "btn btn-success btn-block" %>
       </div>
 <% end %>
+    </div>
 <br />
 <br />

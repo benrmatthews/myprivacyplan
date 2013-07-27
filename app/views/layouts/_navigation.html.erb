@@ -12,17 +12,7 @@
 </ul>
 
 <ul class="nav pull-right">
-  
-  <li>
-  <form class="navbar-form pull-left">
-    <%= search_form_for @search do |f| %>
-    <form id="custom-search-form" class="form-search">
-        <div class="input-append">
-            <%= f.text_field :name_cont %><button type="submit" class="btn"><i class="icon-search"></i></button>
-        </div>
-    </form>
-  <% end %>
-  </li>
+ 
   
   <% if user_signed_in? %>
   <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
